@@ -20,14 +20,14 @@ public class UserService {
         return userDao.addUser(user);
     }
 
-    public int deleteUserService(User user)
+    public int deleteUserService(String login)
     {
-        return userDao.deleteUser(user);
+        return userDao.deleteUser(login);
     }
 
-    public int changePasswordService(User user)
+    public int changePasswordService(String login, String newPassword)
     {
-        return userDao.changePassword(user);
+        return userDao.changePassword(login, newPassword);
     }
 
     public List<User> getAllUsers(){
