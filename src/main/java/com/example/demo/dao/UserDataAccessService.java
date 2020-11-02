@@ -26,6 +26,7 @@ public class UserDataAccessService implements UserDao {
     @Override
     public int changePassword(String login, String newPassword) {
         User user = selectUserByLogin(login);
+        if(user!=null)
         user.setPassword(newPassword);
         return 1;
     }
